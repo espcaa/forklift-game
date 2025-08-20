@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://k8cql2xyjvp"]
+
+[ext_resource type="PackedScene" uid="uid://fawo02wwjrf3" path="res://assets/forklift-body.glb" id="1_6fv0q"]
+
+[node name="RigidBody3D" type="RigidBody3D"]
+
+[node name="forklift-body" parent="." instance=ExtResource("1_6fv0q")]

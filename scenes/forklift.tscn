@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://ogwqv6j6jpiy"]
+
+[ext_resource type="Script" uid="uid://goknxdfaf36o" path="res://scenes/forklift.gd" id="1_0a8xe"]
+[ext_resource type="PackedScene" uid="uid://fawo02wwjrf3" path="res://assets/forklift-body.glb" id="1_k1yrg"]
+[ext_resource type="PackedScene" uid="uid://wbsm6uiu8m6j" path="res://assets/forklift-big-wheel.glb" id="2_u4wsy"]
+[ext_resource type="PackedScene" uid="uid://bdgf4j4v2nndt" path="res://assets/forklift-small-wheel.glb" id="2_waasx"]
+[ext_resource type="PackedScene" uid="uid://dqot30p6tlfll" path="res://assets/forklift-driving-wheel.glb" id="4_bor5y"]
+[ext_resource type="PackedScene" uid="uid://c3r0budcdajby" path="res://assets/forklift-lifty.glb" id="6_orpi7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0a8xe"]
+
+[node name="Forklift" type="Node3D"]
+
+[node name="Forklift" type="VehicleBody3D" parent="."]
+mass = 50.0
+physics_material_override = SubResource("PhysicsMaterial_0a8xe")
+center_of_mass_mode = 1
+center_of_mass = Vector3(1, -2, 0)
+script = ExtResource("1_0a8xe")
+engine_force_value = 100.0
+accel_ramp = 200.0
+
+[node name="forklift-body" parent="Forklift" instance=ExtResource("1_k1yrg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.40874, 0, 0)
+
+[node name="VehicleWheel3D" type="VehicleWheel3D" parent="Forklift"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.47833, 0.0596832, 1.10164)
+use_as_traction = true
+use_as_steering = true
+wheel_radius = 0.56
+suspension_travel = 0.1
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="forklift-big-wheel" parent="Forklift/VehicleWheel3D" instance=ExtResource("2_u4wsy")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.0812, -0.1052, -0.0352865)
+
+[node name="VehicleWheel3D2" type="VehicleWheel3D" parent="Forklift"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.478, 0.06, -1.1145)
+use_as_traction = true
+use_as_steering = true
+wheel_radius = 0.56
+suspension_travel = 0.1
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="forklift-big-wheel" parent="Forklift/VehicleWheel3D2" instance=ExtResource("2_u4wsy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.10835, -0.105, 0.0253019)
+
+[node name="VehicleWheel3D3" type="VehicleWheel3D" parent="Forklift"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.63207, -0.061, -0.949)
+use_as_traction = true
+wheel_radius = 0.4
+suspension_travel = 0.1
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="forklift-small-wheel2" parent="Forklift/VehicleWheel3D3" instance=ExtResource("2_waasx")]
+transform = Transform3D(-4.37113e-08, 0, -0.999999, 0, 1, 0, 0.999999, 0, -4.37113e-08, 0.929314, 0, -3.07715)
+
+[node name="VehicleWheel3D4" type="VehicleWheel3D" parent="Forklift"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.70695, -0.0611553, 0.983)
+use_as_traction = true
+wheel_radius = 0.4
+suspension_travel = 0.1
+suspension_stiffness = 40.0
+damping_compression = 10.0
+damping_relaxation = 5.0
+
+[node name="forklift-small-wheel" parent="Forklift/VehicleWheel3D4" instance=ExtResource("2_waasx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.962, 0.02, 3.084)
+
+[node name="forklift-driving-wheel" parent="Forklift" instance=ExtResource("4_bor5y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4266, 2.38419e-07, 0.00606936)
+
+[node name="Camera3D" type="Camera3D" parent="Forklift"]
+transform = Transform3D(0.476008, -0.308562, 0.823533, -1.53366e-08, 0.936427, 0.350861, -0.879441, -0.167013, 0.445747, 5.41403, 4.45759, 5.7216)
+
+[node name="forklift-lifty" parent="Forklift" instance=ExtResource("6_orpi7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41901, -0.0581274, 0.021265)
