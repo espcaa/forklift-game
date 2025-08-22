@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://rpw3jjebj153"]
+
+[ext_resource type="PackedScene" uid="uid://dcepbuwxymx64" path="res://assets/lamp.glb" id="1_72t4t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_72t4t"]
+size = Vector3(1, 11.6748, 1)
+
+[node name="lamp" type="StaticBody3D"]
+
+[node name="lamp" parent="." instance=ExtResource("1_72t4t")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.686035, 0)
+shape = SubResource("BoxShape3D_72t4t")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.78816, -3.08973)
+light_energy = 5.0
+omni_range = 8.11305

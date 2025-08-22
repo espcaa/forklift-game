@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceawjqxx2qw7w"]
+
+[ext_resource type="Script" uid="uid://d06cept2bslu6" path="res://scenes/hud.gd" id="1_ahhtf"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_ahhtf")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 128
+text = "SPEED:"

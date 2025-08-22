@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c3r0budcdajby"
-path="res://.godot/imported/forklift-lifty.glb-596d9bb6402eb20600b230299c677f92.scn"
+uid="uid://byv2e1h53iabk"
+path="res://.godot/imported/cone.glb-495fe00aee9d284141c95e91707ab80f.scn"
 
 [deps]
 
-source_file="res://assets/forklift-lifty.glb"
-dest_files=["res://.godot/imported/forklift-lifty.glb-596d9bb6402eb20600b230299c677f92.scn"]
+source_file="res://assets/cone.glb"
+dest_files=["res://.godot/imported/cone.glb-495fe00aee9d284141c95e91707ab80f.scn"]
 
 [params]
 
@@ -22,7 +22,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=3
+meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true

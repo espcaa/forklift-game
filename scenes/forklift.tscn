@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ogwqv6j6jpiy"]
+[gd_scene load_steps=14 format=3 uid="uid://ogwqv6j6jpiy"]
 
 [ext_resource type="Script" uid="uid://goknxdfaf36o" path="res://scenes/forklift.gd" id="1_0a8xe"]
 [ext_resource type="PackedScene" uid="uid://fawo02wwjrf3" path="res://assets/forklift-body.glb" id="1_k1yrg"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c3r0budcdajby" path="res://assets/forklift-lifty.glb" id="6_orpi7"]
 [ext_resource type="PackedScene" uid="uid://6sdjatdec7bw" path="res://assets/forklift-rotaty.glb" id="7_seccm"]
 [ext_resource type="PackedScene" uid="uid://ck3p22nxksevm" path="res://assets/forklift-lifty-fork.glb" id="8_8640a"]
+[ext_resource type="PackedScene" uid="uid://ceawjqxx2qw7w" path="res://scenes/hud.tscn" id="9_46080"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0a8xe"]
 
@@ -23,13 +24,11 @@ size = Vector3(3.98428, 3.86145, 1.69983)
 [node name="Forklift" type="Node3D"]
 
 [node name="Forklift" type="VehicleBody3D" parent="."]
-mass = 50.0
+mass = 200.0
 physics_material_override = SubResource("PhysicsMaterial_0a8xe")
 center_of_mass_mode = 1
 center_of_mass = Vector3(1, -2, 0)
 script = ExtResource("1_0a8xe")
-engine_force_value = 100.0
-accel_ramp = 200.0
 
 [node name="forklift-body" parent="Forklift" instance=ExtResource("1_k1yrg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.40874, 0, 0)
@@ -116,3 +115,5 @@ shape = SubResource("BoxShape3D_46080")
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="Forklift"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.158066, 1.8512, -0.102722)
 shape = SubResource("BoxShape3D_p02ba")
+
+[node name="HUD" parent="Forklift" instance=ExtResource("9_46080")]

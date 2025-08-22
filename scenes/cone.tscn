@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://deahrin7vu5jw"]
+
+[ext_resource type="PackedScene" uid="uid://byv2e1h53iabk" path="res://assets/cone.glb" id="1_04qlx"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_04qlx"]
+height = 1.03223
+radius = 0.458008
+
+[node name="cone" type="RigidBody3D"]
+
+[node name="cone" parent="." instance=ExtResource("1_04qlx")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.483887, 0)
+shape = SubResource("CylinderShape3D_04qlx")

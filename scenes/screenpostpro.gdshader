@@ -12,7 +12,7 @@ void fragment() {
     float vignette = 1.0 - smoothstep(0.4, vignette_strength + 0.6, dist);
 
     vec4 col = texture(SCREEN_TEXTURE, SCREEN_UV);
-    
+
     // Boost brightness
     col.rgb *= 1.2 * speed_mult;
 

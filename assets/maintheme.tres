@@ -1,0 +1,20 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://l2jookyfdu1s"]
+
+[ext_resource type="FontFile" uid="uid://iob0e0f4cp5c" path="res://assets/roboto-bold.ttf" id="1_m0kcm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0kcm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5fhcu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d1jfs"]
+
+[resource]
+Button/colors/font_color = Color(0.92549, 0.87451, 0.705882, 1)
+Button/colors/font_focus_color = Color(0.92549, 0.87451, 0.705882, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/font_sizes/font_size = 64
+Button/fonts/font = ExtResource("1_m0kcm")
+Button/styles/focus = SubResource("StyleBoxEmpty_m0kcm")
+Button/styles/hover = SubResource("StyleBoxEmpty_5fhcu")
+Button/styles/normal = SubResource("StyleBoxEmpty_d1jfs")
+Button/styles/pressed = null
